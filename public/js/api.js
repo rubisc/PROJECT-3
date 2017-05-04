@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   console.log("Connected to api.js")
-
+// Delete an API (if admin, as index api view page specifies) functionality
   $('.delBtn').on('click', function(){
     var api = $(this)
     var apiDiv = api.parent()
@@ -13,6 +13,7 @@ $(document).ready(function(){
       apiDiv.remove()
     })
   })
+  // Favorites button functionality
   $('.favoriteButton').one('click', function(){
     var api = $(this)
 
