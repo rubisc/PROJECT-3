@@ -39,19 +39,19 @@
                     <% } %>
                     <!-- FREE CHECKBOX -->
                     <!-- <div class="margin"><label>Free: </label> <%= api.free %></div> -->
-                    <% if (api.free === true) { %> <div class="margin"><label>Free: </label> <span class="free-checkmark">✅</span></div>
+                    <% if (api.free) { %> <div class="margin"><label>Free: </label> <span class="free-checkmark">✅</span></div>
                     <% } else { %>
                     <div class="margin"><label>Free: </label> <span class="free-checkmark">🚫</span></div>
                     <% } %>
                     <!-- AUTHENTICATION CHECKBOX -->
                     <!-- <div class="margin"><label>Authentication offered: </label> <%= api.authentication %></div> -->
-                    <% if (api.authentication === true) { %> <div class="margin"><label>Authentication offered: </label> <span class="authentication-checkmark">✅</span></div>
+                    <% if (api.authentication) { %> <div class="margin"><label>Authentication offered: </label> <span class="authentication-checkmark">✅</span></div>
                     <% } else { %>
                     <div class="margin"><label>Authentication offered: </label> <span class="authentication-checkmark">🚫</span></div>
                     <% } %>
                     <!-- DEPRECATED CHECKBOX -->
                     <!-- <div class="margin"><label>Deprecated: </label> <%= api.deprecated %></div> -->
-                    <% if (api.deprecated === true) { %> <div class="margin"><label>Deprecated: </label> <span class="deprecated-checkmark">✅</span></div>
+                    <% if (api.deprecated) { %> <div class="margin"><label>Deprecated: </label> <span class="deprecated-checkmark">✅</span></div>
                     <% } else { %>
                     <div class="margin"><label>Deprecated: </label> <span class="deprecated-checkmark">🚫</span></div>
                     <% } %>
