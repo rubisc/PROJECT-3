@@ -1,0 +1,13 @@
+<!-- stars for OVERALL RATING -->
+<% if (Math.round((api.install + api.readability + api.technicality)/3) === 1) { %>
+<div class="margin"><label class="overallRating-star">Overall Rating ⭐️ </label></div>
+<% } else if (Math.round((api.install + api.readability + api.technicality)/3) === 2) { %>
+<div class="margin"><label class="overallRating-star">Overall Rating ⭐️ ⭐️  </label></div>
+<% } else if (Math.round((api.install + api.readability + api.technicality)/3) === 3) { %>
+<div class="margin"><label class="overallRating-star">Overall Rating ⭐️ ⭐️ ⭐️</label></div>
+<% } else if (Math.round((api.install + api.readability + api.technicality)/3) === 4) { %>
+<div class="margin"><label class="overallRating-star">Overall Rating ⭐️ ⭐️ ⭐️ ⭐️ </label></div>
+<% } else if (Math.round((api.install + api.readability + api.technicality)/3) === 5) { %>
+<div class="margin"><label class="overallRating-star">Overall Rating ⭐️ ⭐️ ⭐️ ⭐️ ⭐️ </label></div>
+<% } %>
+<!-- ======================================= -->

@@ -31,17 +31,7 @@
                 <h5>
 
                   <!-- stars for OVERALL RATING -->
-                  <% if (Math.round((api.install + api.readability + api.technicality)/3) === 1) { %>
-                  <div class="margin"><label class="overallRating-star">Overall Rating ⭐️ </label></div>
-                  <% } else if (Math.round((api.install + api.readability + api.technicality)/3) === 2) { %>
-                  <div class="margin"><label class="overallRating-star">Overall Rating ⭐️ ⭐️  </label></div>
-                  <% } else if (Math.round((api.install + api.readability + api.technicality)/3) === 3) { %>
-                  <div class="margin"><label class="overallRating-star">Overall Rating ⭐️ ⭐️ ⭐️</label></div>
-                  <% } else if (Math.round((api.install + api.readability + api.technicality)/3) === 4) { %>
-                  <div class="margin"><label class="overallRating-star">Overall Rating ⭐️ ⭐️ ⭐️ ⭐️ </label></div>
-                  <% } else if (Math.round((api.install + api.readability + api.technicality)/3) === 5) { %>
-                  <div class="margin"><label class="overallRating-star">Overall Rating ⭐️ ⭐️ ⭐️ ⭐️ ⭐️ </label></div>
-                  <% } %>
+                <%- include ../partials/overall_rating  %>
                   <!-- ======================================= -->
 
                 </h5>
@@ -59,17 +49,8 @@
                 <div class="row">
                   <div class="col-md-6">
                     <p class="small mt">
-                      <% if (api.install === 1) { %>
-                      <div class="margin"><label class="install-star">Install Rating ⭐️ </label></div>
-                      <% } else if (api.install === 2) { %>
-                      <div class="margin"><label class="install-star">Install Rating ⭐️ ⭐️  </label></div>
-                      <% } else if (api.install === 3) { %>
-                      <div class="margin"><label class="install-star">Install Rating ⭐️ ⭐️ ⭐️</label></div>
-                      <% } else if (api.install === 4) { %>
-                      <div class="margin"><label class="install-star">Install Rating ⭐️ ⭐️ ⭐️ ⭐️ </label></div>
-                      <% } else if (api.install === 5) { %>
-                      <div class="margin"><label class="install-star">Install Rating ⭐️ ⭐️ ⭐️ ⭐️ ⭐️  </label></div>
-                      <% } %>
+                      <!-- stars for INSTALL RATING -->
+                      <%- include ../partials/install_rating  %>
                       <!-- ======================================= -->
                     </p>
                     <!-- <p>2012</p> -->
@@ -77,17 +58,7 @@
                   <div class="col-md-6">
                     <p class="small mt">
                       <!-- stars for READABILITY RATING -->
-                      <% if (api.readability === 1) { %>
-                      <div class="margin"><label>Readability Rating: </label> <span class="readability-star"> ⭐️ </span></div>
-                      <% } else if (api.readability === 2) { %>
-                      <div class="margin"><label>Readability Rating: </label> <span class="readability-star"> ⭐️ ⭐️ </span></div>
-                      <% } else if (api.readability === 3) { %>
-                      <div class="margin"><label>Readability Rating: </label> <span class="readability-star"> ⭐️ ⭐️ ⭐️ </span></div>
-                      <% } else if (api.readability === 4) { %>
-                      <div class="margin"><label>Readability Rating: </label> <span class="readability-star"> ⭐️ ⭐️ ⭐️ ⭐️ </span></div>
-                      <% } else if (api.readability === 5) { %>
-                      <div class="margin"><label>Readability Rating: </label> <span class="readability-star"> ⭐️ ⭐️ ⭐️ ⭐️ ⭐️ </span></div>
-                      <% } %>
+                      <%- include ../partials/install_rating  %>
                       <!-- ======================================= -->
 
 
@@ -96,18 +67,8 @@
                   </div>
                   <div class="col-md-6">
                     <p class="small mt">
-
-                      <% if (api.technicality === 1) { %>
-                      <div class="margin"><label>Technicality Rating: </label> <span class="technicality-star"> ⭐️ </span></div>
-                      <% } else if (api.technicality === 2) { %>
-                      <div class="margin"><label>Technicality Rating: </label> <span class="technicality-star"> ⭐️ ⭐️ </span></div>
-                      <% } else if (api.technicality === 3) { %>
-                      <div class="margin"><label>Technicality Rating: </label> <span class="technicality-star"> ⭐️ ⭐️ ⭐️ </span></div>
-                      <% } else if (api.technicality === 4) { %>
-                      <div class="margin"><label>Technicality Rating: </label> <span class="technicality-star"> ⭐️ ⭐️ ⭐️ ⭐️ </span></div>
-                      <% } else if (api.technicality === 5) { %>
-                      <div class="margin"><label>Technicality Rating: </label> <span class="technicality-star"> ⭐️ ⭐️ ⭐️ ⭐️ ⭐️ </span></div>
-                      <% } %>
+                      <!-- stars for TECHNICALITY RATING -->
+                      <%- include ../partials/technicality_rating  %>
                       <!-- ======================================= -->
 
 
