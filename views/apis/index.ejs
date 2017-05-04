@@ -9,48 +9,33 @@
   <div class="container">
 
     <% if(user && user.admin) { %>
-
-
     <a href="/new" class="btn btn-danger btnRED">Create new Api</a>
-
-
     <% } %>
 <hr>
 
     <% apis.forEach(function(api) { %>
-
-
-
-
         <div class="row">
-
           <div class="col-lg-4 col-md-4 col-sm-4 mb">
         <!-- WHITE PANEL - TOP USER -->
             <div class="white-panel pn">
               <div class="white-header">
                 <h5>
-
                   <!-- stars for OVERALL RATING -->
-                <%- include ../partials/overall_rating  %>
+                  <%- include ../partials/overall_rating %>
                   <!-- ======================================= -->
-
                 </h5>
               </div>
-
               <p>
-
                 <% if (user) {%>
                   <button data-target="<%= api._id %>" class="favoriteButton" type="button"><img id="starButton2" src="http://img.freepik.com/free-vector/vinyl-disc_1021-30.jpg?size=338&ext=jpg"></button>
                 <% } %>
-
               </p>
-
               <p><b><div id=apiname> <%= api.name %> </div></b></p>
                 <div class="row">
                   <div class="col-md-6">
                     <p class="small mt">
                       <!-- stars for INSTALL RATING -->
-                      <%- include ../partials/install_rating  %>
+                      <%- include ../partials/install_rating %>
                       <!-- ======================================= -->
                     </p>
                     <!-- <p>2012</p> -->
@@ -58,20 +43,16 @@
                   <div class="col-md-6">
                     <p class="small mt">
                       <!-- stars for READABILITY RATING -->
-                      <%- include ../partials/install_rating  %>
+                      <%- include ../partials/readability_rating %>
                       <!-- ======================================= -->
-
-
                     </p>
                     <!-- <p>2012</p> -->
                   </div>
                   <div class="col-md-6">
                     <p class="small mt">
                       <!-- stars for TECHNICALITY RATING -->
-                      <%- include ../partials/technicality_rating  %>
+                      <%- include ../partials/technicality_rating %>
                       <!-- ======================================= -->
-
-
                     </p>
                     <!-- <p>2012</p> -->
                   </div>

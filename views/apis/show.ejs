@@ -1,107 +1,93 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <%- include ../partials/head  %>
-</head>
-
-<body>
+  </head>
+  <body>
     <%- include ../partials/header %>
-        <div class="container">
+    <div class="container">
 
-            <!-- WEATHER-2 PANEL -->
-            <div class="col-lg-4 col-md-4 col-sm-4 mb">
-                <div class="weather-2 pn">
-                    <div class="weather-2-header">
-                        <div class="row">
-                            <div class="col-sm-6 col-xs-6">
-                                <p>
-                                    <%= api.name %>
-                                </p>
-                            </div>
-                            <div class="col-sm-6 col-xs-6 goright">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /weather-2 header -->
+      <!-- WEATHER-2 PANEL -->
+						<div class="col-lg-4 col-md-4 col-sm-4 mb">
+							<div class="weather-2 pn">
+								<div class="weather-2-header">
+									<div class="row">
+										<div class="col-sm-6 col-xs-6">
+											<p><%= api.name %></p>
+										</div>
+										<div class="col-sm-6 col-xs-6 goright">
+										</div>
+									</div>
+								</div><!-- /weather-2 header -->
 
-                    <div class="row data">
-                        <div class="col-sm-6 col-xs-6 goleft">
-                            <%= api.about %>
-                                <br>
-                                <br>
-                                <!-- stars for OVERALL RATING -->
-                                <%- include ../partials/overall_rating  %>
-                                    <!-- ======================================= -->
-                        </div>
+								<div class="row data">
+									<div class="col-sm-6 col-xs-6 goleft">
+                    <%= api.about %>
+                    <br>
+                    <br>
+                    <!-- stars for OVERALL RATING -->
+                    <%- include ../partials/overall_rating  %>
+                    <!-- ======================================= -->
+									</div>
 
-          <div class="col-sm-6 col-xs-6 goright">
-              <div class="row centered">
-                  <!-- SUPPORT CHECKBOX -->
-                  <% if (api.support === true) { %>
-                      <div class="margin"><label>Support provided: </label> <span class="support-checkmark">✅</span></div>
-                      <% } else { %>
-                          <div class="margin"><label>Support provided: </label> <span class="support-checkmark">🚫</span></div>
-                          <% } %>
-                              <!-- FREE CHECKBOX -->
-                              <!-- <div class="margin"><label>Free: </label> <%= api.free %></div> -->
-                              <% if (api.free === true) { %>
-                                  <div class="margin"><label>Free: </label> <span class="free-checkmark">✅</span></div>
-                                  <% } else { %>
-                                      <div class="margin"><label>Free: </label> <span class="free-checkmark">🚫</span></div>
-                                      <% } %>
-            <!-- AUTHENTICATION CHECKBOX -->
-            <!-- <div class="margin"><label>Authentication offered: </label> <%= api.authentication %></div> -->
-            <% if (api.authentication === true) { %>
-                <div class="margin"><label>Authentication offered: </label> <span class="authentication-checkmark">✅</span></div>
-                <% } else { %>
+                  <div class="col-sm-6 col-xs-6 goright">
+                  <div class="row centered">
+                    <!-- SUPPORT CHECKBOX -->
+                    <% if (api.support === true) { %> <div class="margin"><label>Support provided: </label> <span class="support-checkmark">✅</span></div>
+                    <% } else { %>
+                    <div class="margin"><label>Support provided: </label> <span class="support-checkmark">🚫</span></div>
+                    <% } %>
+                    <!-- FREE CHECKBOX -->
+                    <!-- <div class="margin"><label>Free: </label> <%= api.free %></div> -->
+                    <% if (api.free === true) { %> <div class="margin"><label>Free: </label> <span class="free-checkmark">✅</span></div>
+                    <% } else { %>
+                    <div class="margin"><label>Free: </label> <span class="free-checkmark">🚫</span></div>
+                    <% } %>
+                    <!-- AUTHENTICATION CHECKBOX -->
+                    <!-- <div class="margin"><label>Authentication offered: </label> <%= api.authentication %></div> -->
+                    <% if (api.authentication === true) { %> <div class="margin"><label>Authentication offered: </label> <span class="authentication-checkmark">✅</span></div>
+                    <% } else { %>
                     <div class="margin"><label>Authentication offered: </label> <span class="authentication-checkmark">🚫</span></div>
                     <% } %>
-          <!-- DEPRECATED CHECKBOX -->
-          <!-- <div class="margin"><label>Deprecated: </label> <%= api.deprecated %></div> -->
-          <% if (api.deprecated === true) { %>
-              <div class="margin"><label>Deprecated: </label> <span class="deprecated-checkmark">✅</span></div>
-              <% } else { %>
-                  <div class="margin"><label>Deprecated: </label> <span class="deprecated-checkmark">🚫</span></div>
-                  <% } %>
-                      <!-- END OF BOOLEANS -->
-                      <div><label>Number of tools offered: </label>
-                          <%= api.tools %>
-                      </div>
-                      <div><label>Category: </label>
-                          <%= api.category %>
-                      </div>
-        <!-- stars for INSTALL RATING -->
-        <%- include ../partials/install_rating  %>
-            <!-- ======================================= -->
-            <!-- <div class="margin"><label>Readability Rating: </label> <span class="readability-star"> <%= api.readability %> </span></div> -->
-            <!-- stars for READABILITY RATING -->
-            <%- include ../partials/install_rating  %>
-                <!-- ======================================= -->
-                <!-- <div class="margin"><label>Technicality Rating: </label> <span class="technicality-star"> <%= api.technicality %></span></div> -->
-                <!-- stars for TECHNICALITY RATING -->
-                <%- include ../partials/technicality_rating  %>
-                    <!-- ======================================= -->
-              </div>
-          </div>
-      </div>
-</div>
-                <br>
-                <!-- ======================================= -->
-
-
-                <!-- end -->
-
-
-                <% if(user && user.admin) { %>
-                    <a class="btn btn-danger btnRED" href="/<%- api._id%>/edit">Edit</a>
+                    <!-- DEPRECATED CHECKBOX -->
+                    <!-- <div class="margin"><label>Deprecated: </label> <%= api.deprecated %></div> -->
+                    <% if (api.deprecated === true) { %> <div class="margin"><label>Deprecated: </label> <span class="deprecated-checkmark">✅</span></div>
+                    <% } else { %>
+                    <div class="margin"><label>Deprecated: </label> <span class="deprecated-checkmark">🚫</span></div>
                     <% } %>
-                        <a class="btn btn-danger btnRED" href="/">Back</a>
-            </div>
+                    <!-- END OF BOOLEANS -->
+                    <div><label>Number of tools offered: </label> <%= api.tools %></div>
+                    <div><label>Category: </label> <%= api.category %></div>
+                    <!-- stars for INSTALL RATING -->
+                    <%- include ../partials/install_rating  %>
+                    <!-- ======================================= -->
+                    <!-- <div class="margin"><label>Readability Rating: </label> <span class="readability-star"> <%= api.readability %> </span></div> -->
+                    <!-- stars for READABILITY RATING -->
+                    <%- include ../partials/readability_rating  %>
+                    <!-- ======================================= -->
+                    <!-- <div class="margin"><label>Technicality Rating: </label> <span class="technicality-star"> <%= api.technicality %></span></div> -->
+                    <!-- stars for TECHNICALITY RATING -->
+                    <%- include ../partials/technicality_rating  %>
+                    <!-- ======================================= -->
+									</div>
+  								</div>
+                  </div>
+							</div>
+              <br>
+              <!-- ======================================= -->
 
 
+          <!-- end -->
+
+
+          <% if(user && user.admin) { %>
+          <a class="btn btn-danger btnRED"href="/<%- api._id%>/edit">Edit</a>
+          <% } %>
+          <a class="btn btn-danger btnRED"href="/">Back</a>
         </div>
-        <%- include ../partials/footer %>
-</body>
 
+
+    </div>
+    <%- include ../partials/footer %>
+  </body>
 </html>
